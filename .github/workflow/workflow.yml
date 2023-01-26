@@ -1,0 +1,33 @@
+#name workflow
+name: "Obsoleto label issues"
+
+#agendar o evento
+on: 
+  schedule: 
+  #especifica a hora do dia em que o fluxo será executado
+  - cron: "45 0 * * 1-5" #runs at 7:00 a.m on every day-of-week from Monday through Friday
+
+#trabalho a ser executado
+jobs: 
+  stale: 
+  runs-on: ubuntu-latest
+  #etapa
+  steps: 
+  - uses: actions/stale@v6 #to check the stale
+  with: 
+    stale-issue-label: 'creation' #nome da label a ser criada
+    days-before-issue-stale: 0 #período de tempo de criação: 60 days
+    labels-to-add-when-unstale: 'creation'
+    
+    
+#     only-labels:
+#     only-issue-labels:  #com todos os x rotulos
+#     any-of-labels: #com um desses rotulos
+#     any-of-issue-labels: #substitui um dos rotulos
+
+#     labels-to-add-when-unstale: #Adicione rótulos específicos de problemas/PRs quando eles se tornarem obsoletos
+
+# only-labels:
+#     only-issue-labels: 
+#     any-of-labels:
+#     any-of-issue-labels
