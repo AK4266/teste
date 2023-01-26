@@ -5,12 +5,13 @@ name: "Obsoleto label issues"
 on: 
   schedule: 
   #especifica a hora do dia em que o fluxo será executado
-  - cron: "0 1 * * 1-5" #runs at 7:00 a.m on every day-of-week from Monday through Friday
+  - cron: "15 1 * * 1-5" #runs at 7:00 a.m on every day-of-week from Monday through Friday
 
+permissions: read | write
 #trabalho a ser executado
 jobs: 
-  stale:
-  Run-npm-on-Ubuntu: 
+    stale:
+  # Run-npm-on-Ubuntu: 
     runs-on: ubuntu-latest
   #etapa
     steps: 
