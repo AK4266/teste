@@ -8,15 +8,16 @@ on:
   - cron: "15 1 * * 1-5" #runs at 7:00 a.m on every day-of-week from Monday through Friday
 
 permissions: read | write #trabalho a ser executado
+
 jobs: 
-    stale: # Run-npm-on-Ubuntu: 
-     runs-on: ubuntu-latest #etapa
-     steps: 
-     - uses: actions/stale@v7.0.0 #to check the stale
-     with: 
-       stale-issue-label: 'creation' #nome da label a ser criada
-       days-before-issue-stale: 0 #período de tempo de criação: 60 days
-       labels-to-add-when-unstale: 'creation'
+  stale: # Run-npm-on-Ubuntu: 
+    runs-on: ubuntu-latest #etapa
+    steps: 
+    - uses: actions/stale@v7.0.0 #to check the stale
+    with: 
+      stale-issue-label: 'creation' #nome da label a ser criada
+      days-before-issue-stale: 0 #período de tempo de criação: 60 days
+      labels-to-add-when-unstale: 'creation'
     
     
 #     only-labels:
