@@ -1,7 +1,7 @@
-name: 'Close stale issues and PRs'
+name: 'Label issue and closed'
 on:
   schedule:
-    - cron: '35 9 * * *'
+    - cron: '00 10 * * *'
 
 jobs:
   stale:
