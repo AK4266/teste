@@ -1,7 +1,7 @@
 name: 'Label issue'
 on: [push]
-permissions: 
-  contents: read
+permissions:
+  issues: write
 jobs:
   stale:
     runs-on: ubuntu-latest
