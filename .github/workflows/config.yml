@@ -1,13 +1,13 @@
 name: 'Label issue'
 on:
   schedule:
-    - cron: '0 11 * * 1-6'
+    - cron: '0 17 * * *'
 
 jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@v7
+      - uses: actions/stale@v7.0.0
         with:
           stale-issue-message: 'Stale issue obsoleto message'
           stale-issue-label: 'no-issue-activity'
