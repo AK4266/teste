@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/stale@v7
         with:
-          stale-issue-message: 'Stale issue message'
+          stale-issue-message: 'Stale issue obsoleto message'
           stale-issue-label: 'no-issue-activity'
           exempt-issue-labels: 'awaiting-approval,work-in-progress'
           only-labels: 'awaiting-feedback,awaiting-answers'
