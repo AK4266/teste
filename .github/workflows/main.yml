@@ -7,8 +7,6 @@ on:
   #especifica a hora do dia em que o fluxo será executado
   - cron: "35 2 * * 1-5" #runs at 7:00 a.m on every day-of-week from Monday through Friday
 
-permissions: read | write #trabalho a ser executado
-
 jobs: 
   stale: # Run-npm-on-Ubuntu: 
     runs-on: ubuntu-latest #etapa
@@ -19,7 +17,8 @@ jobs:
       stale-issue-message: 'This issue is stale because it has been open 60 days with no activity. Remove stale label or comment or this will be closed in 5 days.'
       days-before-issue-stale: 1 #período de tempo de criação: 60 days
      # labels-to-add-when-unstale: 'creation'
-    
+  
+    permissions: read | write #trabalho a ser executado
     
 #     only-labels:
 #     only-issue-labels:  #com todos os x rotulos
