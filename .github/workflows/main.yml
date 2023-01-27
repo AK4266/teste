@@ -1,33 +1,18 @@
-#name workflow
-name: "Obsoleto label issues"
+name: 'Close stale issues and PRs'
+on:
+  schedule:
+    - cron: '25 9 * * *'
 
-#agendar o evento
-on: 
-  schedule: 
-  #especifica a hora do dia em que o fluxo será executado
-  - cron: "05 9 * * 1-5" #runs at 7:00 a.m on every day-of-week from Monday through Friday
-
-jobs: 
-  stale: # Run-npm-on-Ubuntu: 
-    runs-on: ubuntu-latest #etapa
-    steps: 
-    - uses: actions/stale@v7.0.0 #to check the stale
-    with: 
-      stale-issue-label: 'creation' #nome da label a ser criada
-      stale-issue-message: 'This issue is stale because it has been open 60 days with no activity. Remove stale label or comment or this will be closed in 5 days.'
-      days-before-issue-stale: 1 #período de tempo de criação: 60 days
-     # labels-to-add-when-unstale: 'creation'
-  
-    permissions: read | write #trabalho a ser executado
-    
-#     only-labels:
-#     only-issue-labels:  #com todos os x rotulos
-#     any-of-labels: #com um desses rotulos
-#     any-of-issue-labels: #substitui um dos rotulos
-
-#     labels-to-add-when-unstale: #Adicione rótulos específicos de problemas/PRs quando eles se tornarem obsoletos
-
-# only-labels:
-#     only-issue-labels: 
-#     any-of-labels:
-#     any-of-issue-labels
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v7
+        with:
+          stale-issue-message: 'Stale issue message'
+          # stale-pr-message: 'Stale pull request message'
+          stale-issue-label: 'no-issue-activity'
+          exempt-issue-labels: 'awaiting-approval,work-in-progress'
+          # stale-pr-label: 'no-pr-activity'
+          # exempt-pr-labels: 'awaiting-approval,work-in-progress'
+          only-labels: 'awaiting-feedback,awaiting-answers'
