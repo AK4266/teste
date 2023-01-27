@@ -1,8 +1,5 @@
 name: 'Label issue'
 on:
-  schedule:
-    - cron: '0 17 * * *'
-
 jobs:
   stale:
     runs-on: ubuntu-latest
