@@ -1,0 +1,16 @@
+name: 'Label issue'
+on:
+  schedule:
+    - cron: '40 10 * * 1-6'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v7
+        with:
+          stale-issue-message: 'Stale issue obsoleto message'
+          stale-issue-label: 'no-issue-activity'
+          days-before-issue-stale: 1
+          # exempt-issue-labels: 'awaiting-approval, work-in-progress'
+          # only-labels: 'awaiting-feedback, awaiting-answers'
