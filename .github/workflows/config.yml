@@ -1,5 +1,4 @@
 name: 'Label issue'
-on:
 jobs:
   stale:
     runs-on: ubuntu-latest
