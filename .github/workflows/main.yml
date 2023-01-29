@@ -1,7 +1,7 @@
 name: 'Label issue'
 on:  
   schedule: 
-  - cron: "0 1 * * 1-6" 
+  - cron: "0 0 * * *" 
 permissions:
   issues: write
 jobs:
