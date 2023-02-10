@@ -1,13 +1,10 @@
 name: Add bugs to bugs project
-
 on:
   issues:
     types:
       - opened
-
 permissions:
   issues: write
-
 jobs:
   add-to-project:
     name: Add issue to project
