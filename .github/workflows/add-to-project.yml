@@ -1,8 +1,7 @@
 name: Add bugs to bugs project
-on:
-  issues:
-    types:
-      - labeled
+on: 
+  schedule: 
+  - cron: "10 14 * * *" 
 permissions:
   issues: write
 jobs:
