@@ -17,5 +17,5 @@ jobs:
           # to the issue
           project-url: https://github.com/users/LuceliaMarques/projects/2
           github-token: ${{ secrets.ADD_PROJECT }}
-          labeled: bug
+          labeled: bug, cse
           label-operator: OR
