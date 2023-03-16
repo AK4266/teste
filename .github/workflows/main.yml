@@ -1,7 +1,7 @@
 name: ' Obsoleto issue'
 on:  
   schedule: 
-  - cron: "50 9 * * *" 
+  - cron: "0 12 * * *" 
 permissions:
   issues: write
 jobs:
