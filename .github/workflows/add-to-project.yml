@@ -9,6 +9,7 @@ jobs:
   add-to-project:
     name: Add issue to project
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     steps:
       - uses: actions/add-to-project@v0.4.0
         with:
